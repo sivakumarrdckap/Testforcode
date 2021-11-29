@@ -1,7 +1,7 @@
 import React from "react";
 import shipping2 from "../../../../image/shipping2.jpg";
 
-export default function FeatureBrands() {
+export default FeatureBrands() {
     return (
         <>
             <div className="cus-container">
