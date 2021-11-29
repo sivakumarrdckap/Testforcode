@@ -1,0 +1,25 @@
+.order-info {
+    .box-title span{
+        display: inline-block;
+        margin: 0 0 5px 0;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .box {
+        width: 48.8%;
+        margin-bottom: 20px;
+        &:nth-child(odd){
+            clear: left;
+            float: left;
+        }
+        &:nth-child(even){
+            float: right;
+        }
+    }
+    .box-content{
+        font-size: 13px;
+    }
+    .table td, .table th {
+        border: 0;
+    }
+}

@@ -1,0 +1,191 @@
+.mini-cart {
+    width: 400px;
+    position: absolute;
+    height: 0px;
+    z-index: 3;
+    background: #ffffff;
+    right: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+
+    @include respond-below(xs) {
+        width: 300px;
+    }
+
+    .header {
+        padding: 20px 20px 5px 20px;
+
+        strong {
+            margin: 0 5px 0 0;
+        }
+
+        span {
+            color: #a81018;
+            font-weight: 700;
+            margin: 0 5px 0 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .details {
+        font-size: 12px;
+        transition: 0.2s ease;
+        color: #a80f1b;
+
+        &:hover {
+            color: #a81018;
+        }
+    }
+
+    .price {
+        font-size: 15px;
+        font-weight: 700;
+        color: #a81019;
+    }
+
+    .qty {
+        font-size: 12px;
+        margin-top: 7px;
+
+        input#qty {
+            width: 50px;
+            border: solid 1px #e7e7e7;
+            height: 30px;
+            text-align: center;
+            color: #000;
+        }
+    }
+
+    label {
+        position: relative;
+        left: -5px;
+    }
+
+    .cart-body {
+        min-height: 115px;
+        max-height: 300px;
+        overflow-x: hidden;
+
+        &.no-items {
+            min-height: auto;
+            padding: 10px 10px 20px;
+            text-align: center;
+
+            p {
+                font-size: 14px;
+                color: #737373;
+            }
+        }
+    }
+
+    .img-container {
+        position: relative;
+
+        span {
+            position: absolute;
+            font-size: 17px;
+            top: 10px;
+            right: 5px;
+            color: #a80f16;
+            opacity: 1;
+        }
+    }
+
+    .footer {
+        background: #f5f5f5;
+        padding:15px 10px;
+        width: 100%;
+        .subtotal{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            span{
+                text-transform: uppercase;
+                color: #686770;
+                font-weight: 500;
+                font-size: 14px;
+                &:nth-child(2){
+                    color: #a80f16;
+                    font-size: 16px;
+                    font-weight: 700;
+
+                }
+            }
+        }
+        .mini_cart_btn_wrap{
+            display: flex;
+            .view_cart{
+                display: inline-block;
+                background-color: #fff;
+                border: 1px solid #979797;
+                width: calc(50% - 10px);
+                margin-right: 10px;
+                padding: 8px 15px;
+                font-size: 13px;
+                font-weight: 500;
+                text-align: center;
+                transition: 0.4s all;
+                text-transform: uppercase;
+                &:hover{
+                    border: 1px solid #a80f16;
+                    color: #a80f16;
+                }
+            }
+            .mini_checkout_btn{
+                display: inline-block;
+                background-color: #a80f16;
+                border: 1px solid #a80f16;
+                width: calc(50% - 10px);
+                margin-left: 10px;
+                padding: 8px 15px;
+                font-size: 13px;
+                font-weight: 500;
+                text-align: center;
+                color: #fff;
+                transition: 0.4s all;
+                text-transform: uppercase;
+                &:hover{
+                    background: #fff;
+                    color: #a80f16;
+                } 
+            }
+        }
+    }
+}
+
+.ev-cart {
+    position: relative;
+
+    .count {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        background: #a81018;
+        padding: 3px 8px;
+        font-size: 12px;
+        color: #fff;
+        border-radius: 50%;
+    }
+}
+
+.show-cart {
+    height: auto;
+    padding: 10px;
+}
+
+.customOptionLadel {
+    color: #000;
+    font-size: 12px;
+
+    span:nth-child(2) {
+        color: #a80f16;
+        margin: 0 3px;
+        font-size: 15px;
+    }
+}

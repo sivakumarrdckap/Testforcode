@@ -1,0 +1,53 @@
+
+.account {
+    .confirmation{
+        margin-bottom: 20px;
+    }
+    .terms-condition {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+
+        label {
+            margin: 0 0 0 10px;
+            
+        }
+        input[type="checkbox"]{
+            margin-top: 3px;
+        }
+    }
+    .create-account-form{
+        p{
+            font-size: 12px;
+        }
+        a{
+            color: $base-theme-color;
+            font-size: 12px;
+        }
+    }
+    .account-features {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 0 25px;
+        .feature-container {
+            text-align: center;
+            display: inline-flex;
+            flex-direction: column;
+            max-width: 100px;
+            .icon svg {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 16px;
+            }
+        }
+    }    
+}
+.balck_input{
+    color: #000 !important;
+}
+input[type=date]{ 
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

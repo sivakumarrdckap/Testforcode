@@ -1,0 +1,29 @@
+.session-expiry, .sign-out {
+    margin: 30px auto;
+    padding: 50px;
+    text-align: center;
+  
+    h1 {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  
+    p {
+      margin: 10px 0;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  
+    img {
+      width: 100%;
+    }
+
+    .homepageLink{
+        font-size: 16px;
+        color:$bright-theme-color;
+    }
+  }
+  
+.sign-out {
+    margin: 30px auto 200px auto;
+  }

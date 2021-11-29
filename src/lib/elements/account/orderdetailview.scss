@@ -1,0 +1,57 @@
+.order-details-items {
+    .order-title{
+        h3{
+            font-size: 25px;
+            margin-top: 21px;
+            margin-bottom: 14px;
+            text-transform: capitalize;
+        }
+    }
+    .table-wrapper{
+        th, td {
+            padding: 8px 10px;
+            font-size: 13px;
+        }
+        thead {
+            th, th strong {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 600;
+                border-bottom: 1px solid #ebebeb;
+            }
+        }
+        tbody {
+            td, td span {
+                font-size: 13px;
+                vertical-align: top;
+            }
+        }
+        tfoot{
+            th, td span {
+                font-size: 13px;
+            }
+            .subtotal{
+                th, td{
+                    padding-top: 20px;
+                    border-top: 1px solid #d1d1d1;
+                }
+            }   
+        }
+    }
+    th.price, td.price {
+        min-width: 130px;
+        text-align: center;
+        font-weight: 700;
+    }
+    th.qty, td.qty{
+        min-width: 120px;
+        text-align: right;
+    }
+    th.subtotal, td.subtotal, th.excise, td.excise{
+        min-width: 150px;
+        text-align: right;
+    }
+    td.subtotal{
+        font-weight: 700;
+    }
+}

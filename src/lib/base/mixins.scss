@@ -1,0 +1,38 @@
+// base style mixin
+%margin-padd {
+    margin: 0;
+    padding: 0;
+}
+
+%flex-box {
+    display: flex;
+}
+
+%button-hide {
+    background: transparent;
+    font-size: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+%css-icons {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    color: #222e46;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+%static-block-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    color: #222e46;
+    margin-bottom: 35px;
+    text-align: center;
+}

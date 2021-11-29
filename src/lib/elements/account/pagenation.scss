@@ -1,0 +1,96 @@
+.pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    @include respond-below(sm) {
+        flex-direction: column;
+    }
+
+    .toolbar-amount {
+        padding: 7px 0 0;
+        position: relative;
+        z-index: 1;
+        line-height: normal;
+    }
+
+    .pages {
+        @include respond-below(sm) {
+            margin: 20px 0;
+        }
+        &>.label {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .item {
+            font-size: 16px;
+            line-height: 3.2rem;
+            letter-spacing: normal;
+            margin: 0 2px 0 0;
+            display: inline-block;
+        }
+
+        strong.page span {
+            font-size: 16px;
+            line-height: 3.2rem;
+            letter-spacing: normal;
+            color: #333;
+            display: inline-block;
+            font-weight: 700;
+            padding: 0 4px;
+        }
+
+        a.page span{
+            font-size: 16px;
+            color: #1979c3;
+            display: inline-block;
+            padding: 0 4px;
+            text-decoration: none;
+        }
+
+        .action.next {
+            line-height: 30px;
+            margin-left: 12px;
+            border: 1px solid #d1d1d1;
+            color: #7d7d7d;
+            width: 34px;
+            display: inline-block;
+
+            span {
+                display: none;
+            }
+            &:after {
+                content: "\e825";
+                color: #000;
+                display: block;
+                font-family: revicons;
+                text-align: center;
+                z-index: 2;
+                position: relative;
+            }
+        }
+    }
+    .limiter {
+        @include respond-below(sm) {
+            margin: 0 0 20px 0;
+        }
+    }
+    .limiter-label, .limiter-text {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .limiter-options {
+        margin: 0 5px 0 7px;
+        width: auto;
+        padding: 5px 30px 4px 10px;
+    }
+}
+
+

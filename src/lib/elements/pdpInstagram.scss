@@ -1,0 +1,63 @@
+.pdpInstagram {
+  width: 100%;
+
+  &-container {
+    max-width: 740px;
+    padding: 20px 0px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-weight: 100;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+
+    @include respond-below(xs) {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  li {
+    padding: 0px 4px;
+  }
+
+  img {
+    max-width: 100%;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+
+  .react-multiple-carousel__arrow {
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    opacity: 0;
+    transition: 0.4s all;
+    &::before {
+      color: #000;
+    }
+  }
+  .react-multiple-carousel__arrow--right {
+    right: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .react-multiple-carousel__arrow--left {
+    left: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.carousel-center.react-multi-carousel-list {
+  justify-content: center;
+}

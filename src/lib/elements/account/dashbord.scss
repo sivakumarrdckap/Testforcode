@@ -1,0 +1,101 @@
+.account-nav {
+    li {
+        margin: 0;
+        border-top: 1px solid #ebebeb;
+        padding: 13px 0;
+        font: 600 14px/1.35 Montserrat, Helvetica Neue, Verdana, Arial,
+            sans-serif;
+        color: #282828;
+        display: block;
+        cursor: pointer;
+
+        &:first-child {
+            border: 0;
+        }
+
+        &.active {
+            color: $base-theme-color;
+        }
+
+        &:hover {
+            transform: translateX(10px);
+            background: transparent;
+            font-weight: 600;
+            color: $base-theme-color;
+        }
+    }
+}
+
+.account {
+    .card {
+        margin-bottom: 2rem;
+        padding: 20px;
+        border: 1px solid #ebebeb;
+        background: #fff;
+
+        .card-title {
+            margin-bottom: 15px;
+            position: relative;
+
+            .manage-add-btn {
+                position: absolute;
+                right: 0;
+                top: -5px;
+                padding: 4px 10px;
+                font: 400 12px/1.35 Montserrat, Helvetica Neue, Verdana, Arial,
+                    sans-serif;
+                background: $base-theme-color;
+                color: #fff;
+                border-radius: 4px;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                @include respond-below(xs) {
+                    font-size: 0;
+                }
+                svg {
+                    color: #fff;
+                    width: 10px;
+                    @include respond-above(xs) {
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            color: #282828;
+            font: 400 18px/1.35 Montserrat, Helvetica Neue, Verdana, Arial,
+                sans-serif;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ebebeb;
+            padding-bottom: 10px;
+        }
+
+        h5 {
+            font: 500 14px/1.35 Montserrat, Helvetica Neue, Verdana, Arial,
+                sans-serif;
+            color: #282828;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+        .option {
+            margin-top: 20px;
+            .optin-btn {
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 500;
+                margin-right: 10px;
+                display: inline-flex;
+            }
+            svg {
+                width: 12px;
+                margin-right: 7px;
+            }
+        }
+    }
+}

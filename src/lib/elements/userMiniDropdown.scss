@@ -1,0 +1,99 @@
+.userMiniDropdown{
+    width: 320px;
+    position: absolute;
+    height: auto;
+    z-index: 3;
+    background: #ffffff;
+    top:55px;
+    right: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 20px;
+    cursor: auto;
+
+    @include respond-below(xs) {
+        width: 300px;
+    }
+
+    &-avatar{
+            width: 80px;
+            height: 80px;
+            background: #f44336;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            margin: 20px auto;
+            text-align: center;
+        i{
+            margin-top: 22px;
+            font-size: 35px;
+            color: #fff;
+        }
+    }
+
+    &-middle{
+        // width:300px;
+        &-link-1{
+            margin-top: 25px;
+            margin-bottom: 16px;
+            color:#850003;
+            font-size: 14px;
+            text-transform: uppercase;
+        } 
+        &-link-2{
+            display: block;
+            background-color: transparent;
+            border: none;
+            font-size: 13px;
+            margin: 10px auto;
+            color:#777;
+            cursor: pointer;
+            font-weight: 600;
+
+            &:hover{
+                color:#f44336;
+            }
+        }
+    }
+
+    &-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        &-link{
+            padding: 5px 10px;
+            cursor: pointer;
+
+            @include respond-below(xs){
+                margin-bottom: 10px;
+            }
+
+            &:hover > *{
+                color:#f44336;
+            }
+
+            &>i{
+                font-size: 12px;
+                margin-right: 10px;
+            }
+            &>span{
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+.hide-user{
+    display: none;
+    // opacity: 0;
+}

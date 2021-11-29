@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+            name="description"
+            content="Shop incredible deals at Element Vape, a progressive online retail establishment serving the vaping community with mod kits, pod systems, and premium eJuice."
+        />
+        <link rel="manifest" href="manifest.json" />
+        <link
+            href="icons/android/android-launchericon-144-144.png"
+            rel="apple-touch-icon"
+            type="image/png"
+            sizes="144x144"
+        />
+        <title>Element Vape</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    </head>
+    <body data-container="body" class="evpbody">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("./service-worker.js");
+            }
+        </script>
+    </body>
+</html>

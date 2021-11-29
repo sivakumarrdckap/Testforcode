@@ -1,0 +1,370 @@
+//Headless Scss
+//V.1.0
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+// variables
+$base-font: "Montserrat", sans-serif;
+$base-font-size: 16px;
+$base-font-color: #222e46;
+$base-theme-color: #a80f16;
+
+// base style mixin
+%margin-padd {
+    margin: 0;
+    padding: 0;
+}
+
+%flex-box {
+    display: flex;
+}
+
+%button-hide {
+    background: transparent;
+    font-size: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+%css-icons {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    color: #222e46;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+%static-block-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    color: #222e46;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @extend %margin-padd;
+    color: $base-font-color;
+}
+
+p,
+ul,
+li,
+ol,
+a,
+span {
+    @extend %margin-padd;
+    font-size: $base-font-size;
+    font-family: $base-font;
+    list-style: none;
+    text-decoration: none;
+    color: $base-font-color;
+    line-height: normal;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+    @extend %margin-padd;
+    font-family: $base-font;
+    font-weight: 700;
+}
+
+i {
+    color: $base-font-color;
+    font-size: 24px;
+}
+
+a,
+span,
+input,
+button,
+textarea,
+select {
+    &:focus {
+        appearance: none;
+        outline: none;
+    }
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+// slider
+.react-multi-carousel-dot button {
+    border: 0;
+    background: grey;
+}
+
+.react-multi-carousel-dot--active button {
+    background: #000;
+}
+
+// header
+.evpbody {
+    .header-top {
+        background: #fff;
+        border: 3px solid #000;
+    }
+
+    .header-warning-block p {
+        line-height: 45px;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.cus-container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+}
+
+.header-middle {
+    padding: 20px 0;
+
+    .cus-container {
+        min-height: 70px;
+        @extend %flex-box;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        float: unset;
+        max-width: unset;
+        margin: 0;
+
+        img {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.header-panel-right {
+    z-index: 999;
+
+    ul {
+        @extend %flex-box;
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
+
+.min-cart,
+.authorization-link,
+.search-link {
+    padding-left: 20px;
+
+    a {
+        padding: 10px;
+    }
+}
+
+.search-link {
+    position: relative;
+
+    button {
+        @extend %button-hide;
+        cursor: pointer;
+        padding: 0;
+
+        &:before {
+            content: "\f002";
+            @extend %css-icons;
+            width: 26px;
+        }
+    }
+
+    #search-bar {
+        position: absolute;
+        right: 50px;
+        top: -8px;
+
+        form {
+            border: 1px solid #979797;
+            background: transparent;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+
+        input {
+            border: 0;
+            padding: 0;
+            width: 250px;
+            line-height: 40px;
+        }
+
+        label {
+            display: none;
+        }
+    }
+}
+
+// navigation menu
+nav {
+    .cus-container {
+        padding: 5px 0;
+        border-top: 1px solid #aaa;
+        position: relative;
+    }
+
+    & > div > ul {
+        margin: 0 auto;
+        display: table;
+    }
+
+    li.level0 {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+
+        & > a {
+            text-transform: uppercase;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: inline-block;
+            vertical-align: top;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #333;
+            background-color: #fff;
+            cursor: pointer;
+            line-height: 22px;
+            font-weight: 700;
+            font-size: 15px;
+
+            & span {
+                color: $base-theme-color;
+                border-bottom: 4px solid $base-theme-color;
+            }
+
+            & > .img-icon {
+                display: none;
+            }
+        }
+
+        .groupmenu-drop {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            background: #fff;
+            padding: 20px;
+            display: none;
+            z-index: 99999;
+
+            h3 {
+                font-size: 14px;
+                font-weight: 600;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+            li a,
+            li a span {
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 28px;
+
+                & {
+                    color: $base-theme-color;
+                    border-bottom: 2px solid $base-theme-color;
+                    text-decoration: none;
+                }
+            }
+
+            .col-sm-2 ul.sub-menu:first-child {
+                padding-top: 40px;
+            }
+
+            .menu-img-bloc {
+                @extend %flex-box;
+                flex-wrap: wrap;
+
+                a {
+                    width: 50%;
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    padding: 0 20px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        & .groupmenu-drop {
+            display: block;
+        }
+    }
+
+    .groupmenu-drop-content .col-sm-3 img {
+        display: none;
+    }
+}
+
+// Promotion
+.promotion p {
+    margin: 0;
+    font-size: 14px !important;
+    text-align: center;
+    display: block;
+    background: $base-theme-color;
+    color: #fff !important;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+.customOptionLadel {
+    color: #000;
+    font-size: 12px;
+
+    span:nth-child(2) {
+        color: #a80f16;
+        margin: 0 3px;
+        font-size: 15px;
+    }
+}

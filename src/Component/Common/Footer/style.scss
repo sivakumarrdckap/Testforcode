@@ -1,0 +1,567 @@
+// variables
+$base-font: "Montserrat",
+sans-serif;
+$base-font-size: 16px;
+$base-font-color: #222e46;
+$base-theme-color: #a80f16;
+
+%css-icons {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    color: #222e46;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+%static-block-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    color: #222e46;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+%margin-padd {
+    margin: 0;
+    padding: 0;
+}
+
+%flex-box {
+    display: flex;
+}
+
+%button-hide {
+    background: transparent;
+    font-size: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+// footer
+p.h5 {
+    font-size: 12px;
+    margin: 0 0 5px;
+}
+.footer-content-top.newsletter-section {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.newsletter-slogan {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.newsletter-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.block.newsletter {
+    float: unset;
+    max-width: unset;
+    width: 100%;
+    margin: 0;
+
+    .title,
+    label {
+        display: none;
+    }
+
+    .control {
+        position: relative;
+
+        &:before {
+            @extend %css-icons;
+            content: "\f0e0";
+            color: #fff;
+            font-size: 14px;
+            position: absolute;
+            left: -2px;
+            top: 3px;
+            font-weight: 300;
+        }
+    }
+
+    #newsletter {
+        color: #fff;
+        border-color: #fff;
+        padding: 0 35px 0 35px;
+        border-width: 0;
+        border-bottom-width: 1px;
+        background: transparent;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+    }
+
+    form {
+        position: relative;
+    }
+
+    button.action.subscribe.primary {
+        padding: 0;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        border: 0;
+        transform: translateX(-32px);
+        -moz-transition: all 500ms ease;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background: transparent;
+        color: #fff;
+        position: absolute;
+        right: -30px;
+        top: 0;
+
+        span {
+            font-size: 0;
+        }
+
+        &:after {
+            @extend %css-icons;
+            content: "\f061";
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+
+.footer-content-middle .footer-box ul.footer-link li a {
+    font-size: 12px;
+    color: #595959;
+}
+
+#footer-content-6 {
+    margin-top: 15px;
+}
+
+.footer-social a i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #000;
+}
+
+.footer-warning {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+    padding: 1.5rem 0;
+
+    a {
+        font-size: 12px;
+        color: $base-theme-color;
+    }
+}
+
+.copyright-container p {
+    display: inline-flex;
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    padding: 0 10px;
+    margin: 0;
+
+    span {
+        font-size: 12px;
+        color: #666;
+        font-weight: 400;
+    }
+}
+
+.footer_accessibility_link p {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    a,
+    span {
+        font-size: 13px;
+        font-weight: 300;
+        color: #000 !important;
+    }
+}
+
+.antivirus-container a {
+    padding: 0 10px;
+}
+
+// Home page design
+.home-slider {
+    .react-multi-carousel-dot-list {
+        bottom: 25px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .react-multiple-carousel__arrow {
+        border: 1px solid #ffff;
+        background: transparent;
+        height: 100px;
+        border-radius: 0;
+
+        &:hover {
+            background: #fff;
+
+            &:before {
+                color: #000;
+            }
+        }
+    }
+
+    .react-multiple-carousel__arrow--left {
+        left: 0;
+    }
+
+    .react-multiple-carousel__arrow--right {
+        right: 0;
+    }
+}
+
+.promotion-2columns {
+    margin: 60px 0;
+}
+
+.cdz-banner-text {
+    background-image: url("../../../image/Front_Page_Juice_Banner_767x334_.jpg");
+    padding: 120px 20px 120px 60px;
+
+    &.two {
+        background-image: url("../../../image/2020_Best_Vape_Front_Page_Banner.jpg");
+    }
+
+    h2 {
+        span {
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+}
+
+.promotion-2columns.bottom {
+    .cdz-banner-text {
+        background-image: url("../../../image/Starter_Kits_Banner_With_Color_BG_.jpg");
+
+        &.two {
+            background-image: url("../../../image/Pod_Systems_Front_Page_Banner_With_Color_BG_.jpg");
+        }
+    }
+}
+
+.btn-lignt {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 45px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #000;
+    margin-top: 15px;
+}
+
+// product slider
+.product-slider {
+    background: #f0f0f0;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    width: auto !important;
+
+    .item {
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.product-slider-title h3 {
+    @extend %static-block-title;
+}
+
+.product-name a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 10px 0;
+    display: block;
+}
+
+.price-container {
+    margin-bottom: 10px;
+
+    .special-price,
+    .old-price {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .old-price {
+        color: #636363;
+        text-decoration: line-through;
+        margin-left: 5px;
+    }
+}
+
+.product-review {
+    @extend %flex-box;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        font-size: 12px;
+    }
+}
+
+.review-text {
+    margin-left: 5px;
+
+    p,
+    span {
+        font-size: 14px;
+    }
+}
+
+.product-slider {
+    .react-multiple-carousel__arrow--left {
+        left: 0;
+    }
+
+    .react-multiple-carousel__arrow--right {
+        right: 0;
+    }
+}
+
+// brands
+.brands {
+    margin: 60px 0;
+
+    h3 {
+        @extend %static-block-title;
+    }
+}
+
+// offer coupons
+.offer-coupons {
+    margin-bottom: 60px;
+}
+
+.cdz-banner {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .coupon-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 1;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+}
+
+.mini-cart {
+    width: 400px;
+    position: absolute;
+    height: 0px;
+    z-index: 3;
+    background: #ffffff;
+    right: -100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+
+    .header {
+        padding: 20px 20px 5px 20px;
+
+        strong {
+            margin: 0 5px 0 0;
+        }
+
+        span {
+            color: #a81018;
+            font-weight: 900;
+            margin: 0 5px 0 0;
+        }
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .details {
+        font-size: 12px;
+        transition: 0.2s ease;
+        color: #a80f1b;
+
+        &:hover {
+            color: #a81018;
+        }
+    }
+
+    .price {
+        font-size: 15px;
+        font-weight: 700;
+        color: #a81019;
+    }
+
+    .qty {
+        font-size: 12px;
+        margin-top: 7px;
+
+        input#qty {
+            width: 40px;
+            border: solid 1px #e7e7e7;
+            height: 30px;
+            text-align: center;
+            color: #000;
+        }
+    }
+
+    .cart-body {
+        min-height: 115px;
+        max-height: 300px;
+        overflow-x: hidden;
+    }
+
+    .footer {
+        padding: 20px;
+
+        .subtotal {
+            display: flex;
+            justify-content: space-between;
+
+            span:nth-child(1) {
+                color: #686770;
+                font-weight: 600;
+            }
+
+            span:nth-child(2) {
+                color: #a80f16;
+                font-weight: 600;
+            }
+        }
+
+        .button {
+            margin: 7px 0;
+            display: flex;
+
+            button {
+                margin-right: 15px;
+                padding: 7px 15px;
+                width: 48%;
+                text-align: center;
+            }
+
+            button:nth-child(1) {
+                background-color: #fff;
+                border: 1px solid #979797;
+                float: left !important;
+            }
+
+            button:nth-child(2) {
+                color: #fff;
+                border-color: #a80f16;
+                background: #a80f16;
+            }
+        }
+    }
+}
+
+.ev-cart {
+    position: relative;
+
+    .count {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        background: #a81018;
+        padding: 3px 8px;
+        font-size: 12px;
+        color: #fff;
+        border-radius: 50%;
+    }
+}
+
+.show-cart {
+    height: auto;
+}
+
+// temp
+
+.product-info-main .product-info-stock-sku .stock.available {
+    text-transform: capitalize;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin: 7px 0;
+    text-align: right;
+}
+
+.product-info-main .page-title-wrapper .page-title {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: $base-font;
+}
+
+.product-main-top .product-info-main .product.attribute.overview {
+    margin-top: 20px;
+}
+
+.product-info-main .cart-qty .qty,
+.block-bundle-summary .cart-qty .qty {
+    border-width: 1px;
+}
+
+@media (min-width: 1300px) {
+
+    .container,
+    .page-main:not(.page-main-full)>div,
+    .breadcrumbs .items {
+        width: 1300px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .container,
+    .page-main:not(.page-main-full)>div,
+    .breadcrumbs .items {
+        width: 1400px;
+    }
+}
+

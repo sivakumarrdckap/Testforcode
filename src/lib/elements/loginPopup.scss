@@ -1,0 +1,192 @@
+.loginPopup{
+    display: flex;
+    position: relative;
+    padding: 20px;
+
+    @include respond-below(sm){
+        flex-direction: column;
+        width: 100%;
+    }
+
+    h5{
+        text-transform: uppercase;
+        font-size: 16px;
+
+        @include respond-below(xs){
+            font-size: 14px;
+        }
+    }
+
+    &-left{
+        max-width: 50%;
+        flex: 0 0 50%;
+        width: 100%;
+        padding-right: 30px;
+        border-right: 1px solid #c1c1c1;
+
+        @include respond-below(sm){
+            border-right: none;
+            border-bottom: 1px solid #c1c1c1;
+            padding-bottom: 32px;
+            max-width: 100%;
+            padding-right: 0;
+        }
+
+        &-email{
+            margin-top: 15px;
+            font-size: 13px;
+            label{
+                margin-bottom: 2px;
+            }
+            label>span{
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+            input{
+                display: block;
+                width: 100%;
+                padding: 5px;
+                height: 40px;
+                color: #777;
+            }
+        }
+        &-password{
+            margin-top: 15px;
+            label{
+                margin-bottom: 2px;
+            }
+            label>span{
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+            input{
+                display: block;
+                width: 100%;
+                padding: 5px;
+                height: 40px;
+                color: #777;
+            }
+        }
+        &-action-block{
+            display: flex;
+            margin-top: 35px;
+            align-items: center;
+            justify-content: space-between;
+            @include respond-below(sm){
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                width: 100%;
+                align-items: stretch;
+            }
+
+            &-left{
+                a{
+                    font-size: 13px;
+                    text-transform: capitalize;
+                }
+            }
+
+            &-right{
+                padding: 7px 12px;
+                text-transform: uppercase;
+                background-color: #fff ;
+                border: 1px solid #000;
+                cursor: pointer;
+                font-size: 13px;
+                font-weight: 600;
+
+                @include respond-below(sm){
+                  background-color: $base-theme-color;
+                  display: block;
+                  width: 100%;
+                  color: #fff;
+                  border: 1px solid transparent;
+                  margin-bottom: 20px;
+                }
+
+                &:hover{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &-right{
+        max-width: 50%;
+        flex: 0 0 50%;
+        width: 100%;
+        padding-left: 30px;
+        // margin-top: 20px;
+
+        @include respond-below(sm){
+            padding-top: 28px;
+            max-width: 100%;
+            margin-top: 20px;
+            padding-left: 0;
+            padding-right: 0px;
+        }
+        
+
+        p{
+            margin: 15px 0px;
+            font-size: 13px;
+        }
+
+        ul{
+            margin-bottom: 20px;
+            li{
+                font-size: 13px;
+                &::before{
+                    content: "•"; 
+                    color: #000;
+                    display: inline-block; 
+                    margin: 0px 8px;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &-button{
+            background-color:$base-theme-color;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 7px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            float: right;
+            margin-top: 5px;
+
+            &:hover{
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #000;
+            }
+
+            @include respond-below(sm){
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &-center{
+        position: absolute;
+        top:calc(50% - 18px);
+        left:calc(50% - 18px);
+        border: 1px solid #c1c1c1;
+        border-radius: 50%;
+        font-size: 12px;
+        color: #c1c1c1;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background-color: #fff;
+        z-index: 999;
+    }
+}
