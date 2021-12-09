@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Loginform from "./components/loginForm";
 import Creataccountform from "./components/creatAccount";
 
-export default function Login() {
+export default function LoginUser() {
     const [succToastMsg, setSuccToastMsg] = useState("");
     const [errMsgtost, seterrMsgtost] = useState("");
     return (
