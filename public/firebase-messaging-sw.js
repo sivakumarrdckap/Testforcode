@@ -38,3 +38,5 @@ firebase.initializeApp({
 // if (firebase.messaging.isSupported()) {
 const initMessaging = firebase.messaging();
 // }
+
+// test for commit
